@@ -1,4 +1,4 @@
-package diccionariosimple.implementacionCola;
+package ej5.diccionariosimple.implementacionCola;
 
 import tda.ConjuntoTDA;
 import tda.DiccionarioSimpleTDA;

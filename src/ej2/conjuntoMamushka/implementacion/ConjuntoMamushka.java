@@ -1,6 +1,6 @@
-package conjuntoMamushka.implementacion;
+package ej2.conjuntoMamushka.implementacion;
 
-import conjuntoMamushka.interfaz.ConjuntoMamushkaTDA;
+import ej2.conjuntoMamushka.interfaz.ConjuntoMamushkaTDA;
 
 public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 

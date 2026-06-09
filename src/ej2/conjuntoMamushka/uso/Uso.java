@@ -1,7 +1,7 @@
-package conjuntoMamushka.uso;
+package ej2.conjuntoMamushka.uso;
 
-import conjuntoMamushka.implementacion.ConjuntoMamushka;
-import conjuntoMamushka.interfaz.ConjuntoMamushkaTDA;
+import ej2.conjuntoMamushka.implementacion.ConjuntoMamushka;
+import ej2.conjuntoMamushka.interfaz.ConjuntoMamushkaTDA;
 
 public class Uso {
 

@@ -1,4 +1,4 @@
-package conjuntoespecial.interfaz;
+package ej1.conjuntoespecial.interfaz;
 
 public interface ConjuntoEspecialTDA {
 

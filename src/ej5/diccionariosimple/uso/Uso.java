@@ -1,6 +1,6 @@
-package diccionariosimple.uso;
+package ej5.diccionariosimple.uso;
 
-import diccionariosimple.implementacionCola.DiccionarioSimpleCola;
+import ej5.diccionariosimple.implementacionCola.DiccionarioSimpleCola;
 import imple.Conjunto;
 import tda.ConjuntoTDA;
 import tda.DiccionarioSimpleTDA;

@@ -1,7 +1,7 @@
-package conjuntoespecial.uso;
-import conjuntoespecial.interfaz.ConjuntoEspecialTDA;
-import conjuntoespecial.interfaz.ConjuntoEspecialTDA.Respuesta;
-import conjuntoespecial.implementacion.ConjuntoEspecial;
+package ej1.conjuntoespecial.uso;
+import ej1.conjuntoespecial.implementacion.ConjuntoEspecial;
+import ej1.conjuntoespecial.interfaz.ConjuntoEspecialTDA;
+import ej1.conjuntoespecial.interfaz.ConjuntoEspecialTDA.Respuesta;
 public class Uso {
 
 	public static void main(String[] args) {

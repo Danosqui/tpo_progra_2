@@ -1,6 +1,6 @@
-package conjuntoespecial.implementacion;
+package ej1.conjuntoespecial.implementacion;
 
-import conjuntoespecial.interfaz.ConjuntoEspecialTDA;
+import ej1.conjuntoespecial.interfaz.ConjuntoEspecialTDA;
 import imple.Conjunto;
 
 public class ConjuntoEspecial implements ConjuntoEspecialTDA {

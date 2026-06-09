@@ -1,4 +1,4 @@
-package conjuntoMamushka.interfaz;
+package ej2.conjuntoMamushka.interfaz;
 
 public interface ConjuntoMamushkaTDA {
 
