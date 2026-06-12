@@ -26,27 +26,38 @@ public class Ejercicio7USO {
 
 	private static ConjuntoTDA funcion(PilaTDA pila) {
 		// TODO Auto-generated method stub
-	ConjuntoTDA conjunto = new Conjunto();
-	conjunto.inicializarConjunto();
-	int[] lista = new int[100];
-	int puntero=0;
-	while(!pila.pilaVacia())
-	{
-		int numero=pila.tope();
-		lista[puntero]=numero;
-		puntero++;
-		pila.desapilar();
-	}
-	for (int i=0;i<puntero;i++)
-	{
-		for(int j=i+1;j<puntero;j++)
-		{
-			if(lista[i]==lista[j])
-			{
-				conjunto.agregar(lista[i]);
-			}
-		}
-	}
-	return conjunto;
+		 	ConjuntoTDA conjunto = new Conjunto();
+		    conjunto.inicializarConjunto();
+
+		    PilaTDA aux = new Ejercicio7Imple();
+		    aux.inicializarPila();
+
+		    int[] lista = new int[100];
+		    int puntero = 0;
+
+		    while (!pila.pilaVacia()) {
+		        int numero = pila.tope();
+		        pila.desapilar();
+
+		        lista[puntero] = numero;
+		        puntero++;
+
+		        aux.apilar(numero);
+		    }
+		    while (!aux.pilaVacia()) {
+		        int numero = aux.tope();
+		        aux.desapilar();
+		        pila.apilar(numero);
+		    }
+
+		    for (int i = 0; i < puntero; i++) {
+		        for (int j = i + 1; j < puntero; j++) {
+		            if (lista[i] == lista[j]) {
+		                conjunto.agregar(lista[i]);
+		            }
+		        }
+		    }
+
+		    return conjunto;
 	}
 }

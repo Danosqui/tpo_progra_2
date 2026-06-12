@@ -10,7 +10,7 @@ public class Uso {
 		cola.inicializarCola();
 		
 		cola.acolar(1);
-		cola.acolar(2);
+		cola.acolar(4);
 		cola.acolar(3);
 		cola.acolar(4);
 		cola.acolar(4);
@@ -29,36 +29,53 @@ public class Uso {
 
 	private static ColaTDA funcion(ColaTDA cola) {
 		// TODO Auto-generated method stub
-		ColaTDA cola2= new Cola();
-		cola2.inicializarCola();
-		int[] lista= new int[100];
-		int puntero=0;
-		while(!cola.colaVacia())
-		{
-			int numero=cola.primero();
-			lista[puntero]=numero;
-			cola.desacolar();
-			puntero++;
-		}
-		for (int i=0;i<puntero;i++)
-		{
-			for (int j=i+1;j<puntero;j++)
-			{
-				if(lista[i]==lista[j])
-				{
-					for (int u=j;u<puntero;u++)
-					{
-						lista[u]=lista[u+1];
-					}
-					puntero--;
-					j--;				}
-			}
-		}
-		for(int i=0;i<puntero;i++)
-		{
-			cola2.acolar(lista[i]);
-		}
-		return cola2;
+		ColaTDA aux = new Cola();
+	    aux.inicializarCola();
+
+	    int[] lista = new int[100];
+	    int puntero = 0;
+
+	    while (!cola.colaVacia()) {
+	        int numero = cola.primero();
+	        cola.desacolar();
+
+	        lista[puntero] = numero;
+	        puntero++;
+
+	        aux.acolar(numero);
+	    }
+	    while (!aux.colaVacia()) {
+	        int numero = aux.primero();
+	        aux.desacolar();
+
+	        cola.acolar(numero);
+	    }
+	    
+	    ColaTDA cola2 = new Cola();
+	    cola2.inicializarCola();
+
+	    
+	    for (int i=0;i<puntero;i++) 
+	    { 
+	    	for (int j=i+1;j<puntero;j++) 
+	    	{ 
+	    		if(lista[i]==lista[j]) 
+	    		{ 
+	    			for (int u=j;u<puntero;u++) 
+	    			{ 
+	    				lista[u]=lista[u+1]; 
+	    				} 
+	    			puntero--; 
+	    			j--; 
+	    			} 
+	    		} 
+	    	} 
+	    for(int i=0;i<puntero;i++) 
+	    { 
+	    	cola2.acolar(lista[i]); 
+	    }
+
+	    return cola2;
 	}
 
 }

@@ -20,20 +20,29 @@ public class Ejercicio6 {
 	}
 
 	private static float funcion(PilaTDA pila) {
-		// TODO Auto-generated method stub
-		float contador=0;
-		float contador2=0;
-		while(!pila.pilaVacia())
-		{
-			int numero=pila.tope();
-			pila.desapilar();
-			contador=contador+1;
-			if(numero%2==0)
-			{
-				contador2=contador2+1;
-			}
-		}
-		float promedio = (contador2/contador)*100;
-		return promedio;
+	    PilaTDA aux = new Ejercicio6Imple();
+	    aux.inicializarPila();
+
+	    float total = 0;
+	    float pares = 0;
+
+	    while (!pila.pilaVacia()) {
+	        int numero = pila.tope();
+	        pila.desapilar();
+
+	        total++;
+
+	        if (numero % 2 == 0) {
+	            pares++;
+	        }
+	        aux.apilar(numero);
+	    }
+	    while (!aux.pilaVacia()) {
+	        int numero = aux.tope();
+	        aux.desapilar();
+	        pila.apilar(numero);
+	    }
+	    float porcentaje=(pares / total) * 100;
+	    return porcentaje;
 	}
 }

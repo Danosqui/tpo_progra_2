@@ -41,24 +41,50 @@ public class Uso {
 	private static ConjuntoTDA funcion(PilaTDA pila, ColaTDA cola) {
 		// TODO Auto-generated method stub
 		int[] lista = new int[100];
-		int puntero=0;
-		while(!cola.colaVacia())
-		{
-			int numero=cola.primero();
-			lista[puntero]=numero;
-			cola.desacolar();
-			puntero++;
-		}
-		int[] lista2=new int[100];
-		int puntero2=0;
-		while(!pila.pilaVacia())
-		{
-			int numero2=pila.tope();
-			lista2[puntero2]=numero2;
-			pila.desapilar();
-			puntero2++;
-		}
-		ConjuntoTDA conjunto= new Conjunto();
+	    int puntero = 0;
+
+	    ColaTDA auxCola = new Cola();
+	    auxCola.inicializarCola();
+
+	    while (!cola.colaVacia()) {
+	        int numero = cola.primero();
+	        lista[puntero] = numero;
+	        puntero++;
+
+	        cola.desacolar();
+	        auxCola.acolar(numero);
+	    }
+
+	   
+	    while (!auxCola.colaVacia()) {
+	        int numero = auxCola.primero();
+	        auxCola.desacolar();
+	        cola.acolar(numero);
+	    }
+
+	    int[] lista2 = new int[100];
+	    int puntero2 = 0;
+
+	    PilaTDA auxPila = new Pila();
+	    auxPila.inicializarPila();
+
+	    while (!pila.pilaVacia()) {
+	        int numero = pila.tope();
+	        lista2[puntero2] = numero;
+	        puntero2++;
+
+	        pila.desapilar();
+	        auxPila.apilar(numero);
+	    }
+
+	   
+	    while (!auxPila.pilaVacia()) {
+	        int numero = auxPila.tope();
+	        auxPila.desapilar();
+	        pila.apilar(numero);
+	    }
+
+	    ConjuntoTDA conjunto= new Conjunto();
 		conjunto.inicializarConjunto();
 		for(int i=0;i<puntero;i++)
 		{
