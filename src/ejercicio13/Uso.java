@@ -1,4 +1,4 @@
-package Ejercicio13;
+package ejercicio13;
 import tda.ABBTDA;
 import imple.ABB;
 

@@ -1,4 +1,4 @@
-package Ejercicio10;
+package ejercicio10;
 
 import tda.DiccionarioSimpleTDA;
 import tda.PilaTDA;

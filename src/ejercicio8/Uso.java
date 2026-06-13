@@ -1,4 +1,4 @@
-package Ejercicio8;
+package ejercicio8;
 
 import imple.Cola;
 import tda.ColaTDA;

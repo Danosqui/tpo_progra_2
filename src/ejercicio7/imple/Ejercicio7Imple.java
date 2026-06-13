@@ -1,4 +1,4 @@
-package Ejercicio7;
+package ejercicio7.imple;
 
 import tda.PilaTDA;
 

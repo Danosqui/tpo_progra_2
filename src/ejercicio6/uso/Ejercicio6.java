@@ -1,5 +1,5 @@
-package Ejercicio6USO;
-import Ejercicio6Imple.Ejercicio6Imple;
+package ejercicio6.uso;
+import ejercicio6.imple.Ejercicio6Imple;
 import tda.PilaTDA;
 public class Ejercicio6 {
 	public static void main(String[] args) {

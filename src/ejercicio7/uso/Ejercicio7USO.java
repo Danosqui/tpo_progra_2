@@ -1,7 +1,7 @@
-package Ejercicio7USO;
-import Ejercicio7.Ejercicio7Imple;
+package ejercicio7.uso;
 import tda.PilaTDA;
 import tda.ConjuntoTDA;
+import ejercicio7.imple.Ejercicio7Imple;
 import imple.Conjunto;
 public class Ejercicio7USO {
 	public static void main(String[] args) {

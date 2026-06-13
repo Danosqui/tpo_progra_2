@@ -1,4 +1,4 @@
-package Ejercicio11;
+package ejercicio11;
 import tda.ColaTDA;
 import tda.DiccionarioMultipleTDA;
 import imple.DiccionarioMultiple;

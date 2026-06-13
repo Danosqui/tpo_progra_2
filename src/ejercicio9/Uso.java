@@ -1,4 +1,4 @@
-package Ejercicio9;
+package ejercicio9;
 import tda.ColaTDA;
 import tda.PilaTDA;
 import imple.Cola;
