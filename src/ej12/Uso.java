@@ -4,7 +4,7 @@ import imple.ABB;
 
 public class Uso {
 	
-	public static void main(String[] args) { //el test
+	public static void main(String[] args) {
 		ABBTDA arbolito = new ABB();
 		arbolito.inicializarArbol();
 		arbolito.agregarElem(1);

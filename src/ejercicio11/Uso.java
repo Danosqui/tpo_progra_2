@@ -9,7 +9,7 @@ public class Uso {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		ColaTDA cola = new Cola();
 		cola.inicializarCola();
 		DiccionarioMultipleTDA dic= new DiccionarioMultiple();
@@ -25,7 +25,7 @@ public class Uso {
 		
 	}
 
-	private static ColaTDA funcion(DiccionarioMultipleTDA dic) {
+	private static ColaTDA funcion(DiccionarioMultipleTDA dic) { // complejidad polinomica
 		ColaTDA cola = new Cola();
 		cola.inicializarCola();
 		

@@ -10,7 +10,7 @@ public class MultiPila implements MultiPilaTDA { //no puede extender pilatda por
 	private PilaTDA elementos;
 
 	@Override
-	public void apilar(PilaTDA valores) {
+	public void apilar(PilaTDA valores) { // complejidad lineal
 
 		PilaTDA copia = copiarPila(valores);
 		PilaTDA aux = new Pila();
@@ -29,7 +29,7 @@ public class MultiPila implements MultiPilaTDA { //no puede extender pilatda por
 	}
 
 	@Override
-	public void desapilar(PilaTDA valores) {
+	public void desapilar(PilaTDA valores) { // complejidad lineal
 		
 		PilaTDA valores2 = copiarPila(valores);
 		PilaTDA elementosInv=new Pila();
@@ -57,7 +57,7 @@ public class MultiPila implements MultiPilaTDA { //no puede extender pilatda por
 	}
 
 	@Override
-	public PilaTDA tope(int cantidad) {
+	public PilaTDA tope(int cantidad) { // complejidad lineal
 		PilaTDA primerosN = new Pila();
 		primerosN.inicializarPila();
 		while(!elementos.pilaVacia() && cantidad>0) {
@@ -74,18 +74,18 @@ public class MultiPila implements MultiPilaTDA { //no puede extender pilatda por
 	}
 
 	@Override
-	public void inicializarPila() {
+	public void inicializarPila() { // complejidad constante
 		this.elementos = new Pila();
 		elementos.inicializarPila();
 
 	}
 
 	@Override
-	public boolean pilaVacia() {
+	public boolean pilaVacia() { // complejidad constante
 		return elementos.pilaVacia();
 	}
 	
-	private PilaTDA copiarPila(PilaTDA origen) {
+	private PilaTDA copiarPila(PilaTDA origen) { // complejidad lineal
 	    PilaTDA aux = new Pila();
 	    PilaTDA destino = new Pila();
 	    

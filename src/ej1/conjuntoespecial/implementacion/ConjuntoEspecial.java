@@ -12,14 +12,14 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 	private Nodo primero;
 	
 	@Override
-	public void inicializarConjunto() {
+	public void inicializarConjunto() { // complejidad constante
 		
 		primero = null;
 
 	}
 
 	@Override
-	public Respuesta agregar(int valor) {
+	public Respuesta agregar(int valor) { // complejidad lineal
 
 		
 		boolean pertenece = pertenece(valor);
@@ -39,7 +39,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 	}
 
 	@Override
-	public Respuesta sacar(int valor) {
+	public Respuesta sacar(int valor) { // complejidad lineal
 		
 		
 		Respuesta rta = new Respuesta();
@@ -71,7 +71,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 	}
 
 	@Override
-	public Respuesta elegir() {
+	public Respuesta elegir() { // complejidad constante
 		Respuesta rta = new Respuesta();
 		if (primero!=null) {
 			rta.error=false;
@@ -82,7 +82,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 	}
 
 	@Override
-	public boolean pertenece(int valor) {
+	public boolean pertenece(int valor) { // complejidad lineal
 		Nodo aux = new Nodo();
 		aux = primero;
 		boolean pertenece = false;
@@ -95,7 +95,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 	}
 
 	@Override
-	public boolean conjuntoVacio() {
+	public boolean conjuntoVacio() { // complejidad constante
 		return primero==null;
 	}
 

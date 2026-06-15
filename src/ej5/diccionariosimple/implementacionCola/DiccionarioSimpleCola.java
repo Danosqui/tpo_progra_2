@@ -12,7 +12,7 @@ public class DiccionarioSimpleCola implements DiccionarioSimpleTDA {
 	private ColaTDA claves;
 
 	@Override
-	public void inicializarDiccionario() {
+	public void inicializarDiccionario() { // complejidad constante
 		datos = new Cola();
 		datos.inicializarCola();
 		claves = new Cola();
@@ -20,7 +20,7 @@ public class DiccionarioSimpleCola implements DiccionarioSimpleTDA {
 	}
 
 	@Override
-	public void agregar(int clave, int valor) {
+	public void agregar(int clave, int valor) { // complejidad lineal
 		ColaTDA auxD = new Cola();
 		ColaTDA auxC = new Cola();
 		auxD.inicializarCola();
@@ -50,7 +50,7 @@ public class DiccionarioSimpleCola implements DiccionarioSimpleTDA {
 	}
 
 	@Override
-	public ConjuntoTDA claves() {
+	public ConjuntoTDA claves() { // complejidad polinomica
 		ColaTDA aux = copiarCola(claves);
 		ConjuntoTDA claves2 = new Conjunto();
 		
@@ -67,7 +67,7 @@ public class DiccionarioSimpleCola implements DiccionarioSimpleTDA {
 	}
 
 	@Override
-	public void eliminar(int n) {
+	public void eliminar(int n) { // complejidad lineal
 		ColaTDA auxD = new Cola();
 		ColaTDA auxC = new Cola();
 		auxD.inicializarCola();
@@ -95,7 +95,7 @@ public class DiccionarioSimpleCola implements DiccionarioSimpleTDA {
 
 
 	@Override
-	public int recuperar(int n) {
+	public int recuperar(int n) { // complejidad lineal
 		ColaTDA auxD = new Cola();
 		ColaTDA auxC = new Cola();
 		auxD.inicializarCola();
@@ -125,7 +125,7 @@ public class DiccionarioSimpleCola implements DiccionarioSimpleTDA {
 		return ret;
 	}
 	
-	private ColaTDA copiarCola(ColaTDA original) {
+	private ColaTDA copiarCola(ColaTDA original) { // complejidad lineal
 		ColaTDA copia = new Cola();
 		ColaTDA aux = new Cola();
 		copia.inicializarCola();

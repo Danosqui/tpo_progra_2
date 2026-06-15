@@ -5,7 +5,7 @@ import tda.ConjuntoTDA;
 import imple.Conjunto;
 public class Uso {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// TODO Auto-generated method stub
 		GrafoTDA grafo=new Grafo();
 		grafo.inicializarGrafo();;
@@ -24,7 +24,7 @@ public class Uso {
 		funcion(grafo, numero1, numero2);
 	}
 
-	private static ConjuntoTDA funcion(GrafoTDA grafo, int numero1, int numero2) {
+	private static ConjuntoTDA funcion(GrafoTDA grafo, int numero1, int numero2) { // complejidad polinomica
 		// TODO Auto-generated method stub
 		ConjuntoTDA puentes = new Conjunto();
 	    puentes.inicializarConjunto();

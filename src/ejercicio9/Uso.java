@@ -8,7 +8,7 @@ import tda.ConjuntoTDA;
 public class Uso {
 
 	public static void main(String[] args) {
-		
+
 		PilaTDA pila = new Pila();
 		ColaTDA cola=new Cola();
 		pila.inicializarPila();
@@ -38,7 +38,7 @@ public class Uso {
 		
 	}
 
-	private static ConjuntoTDA funcion(PilaTDA pila, ColaTDA cola) {
+	private static ConjuntoTDA funcion(PilaTDA pila, ColaTDA cola) { // complejidad polinomica
 		// TODO Auto-generated method stub
 		int[] lista = new int[100];
 	    int puntero = 0;

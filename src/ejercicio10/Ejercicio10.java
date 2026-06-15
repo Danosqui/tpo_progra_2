@@ -9,7 +9,7 @@ import tda.ConjuntoTDA;
 public class Ejercicio10 {
 
 	public static void main(String[] args) {
-		
+
 		PilaTDA pila = new Pila();
 
 		pila.inicializarPila();
@@ -36,7 +36,7 @@ public class Ejercicio10 {
 			}
 	}
 
-	private static DiccionarioSimpleTDA funcion(PilaTDA pila) {
+	private static DiccionarioSimpleTDA funcion(PilaTDA pila) { // complejidad polinomica
 		// TODO Auto-generated method stub
 		DiccionarioSimpleTDA dic= new DiccionarioSimple();
 		dic.inicializarDiccionario();

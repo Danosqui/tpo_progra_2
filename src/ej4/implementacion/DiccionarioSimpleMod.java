@@ -15,13 +15,13 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 	private int cant;
 
 	@Override
-	public void inicializarDiccionario() {
+	public void inicializarDiccionario() { // complejidad constante
 		cant = 0;
 		elementos = new Elemento[100];
 	}
 
 	@Override
-	public void agregar(int clave, int valor) {
+	public void agregar(int clave, int valor) { // complejidad lineal
 		int pos = this.claveAIndice(clave);
 		if (pos == -1) {
 			elementos[cant] = new Elemento();
@@ -36,7 +36,7 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 
 	}
 	
-	private int claveAIndice(int clave) {
+	private int claveAIndice(int clave) { // complejidad lineal
 		int i = cant - 1;
 		while (i >= 0 && elementos[i].clave != clave)
 			i--;
@@ -44,7 +44,7 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 	}
 
 	@Override
-	public void eliminar(int clave) {
+	public void eliminar(int clave) { // complejidad lineal
 		int pos = this.claveAIndice(clave);
 		if (pos != -1) { //la clave existe
 			elementos[pos] = elementos[cant-1];
@@ -54,19 +54,19 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 	}
 
 	@Override
-	public int recuperar(int clave) {
+	public int recuperar(int clave) { // complejidad lineal
 		int pos = claveAIndice(clave);
 		return elementos[pos].valor;
 	}
 
 	@Override
-	public int recuperarMod(int clave) {
+	public int recuperarMod(int clave) { // complejidad lineal
 		int pos = claveAIndice(clave);
 		return elementos[pos].factorMod;
 	}
 
 	@Override
-	public ConjuntoTDA claves() {
+	public ConjuntoTDA claves() { // complejidad polinomica
 		ConjuntoTDA c = new Conjunto();
 		c.inicializarConjunto();
 		for (int i=0; i < cant; i++) {

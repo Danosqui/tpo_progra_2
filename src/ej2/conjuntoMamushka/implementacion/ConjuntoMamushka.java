@@ -12,12 +12,12 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 	private Nodo c;
 	
 	@Override
-	public void inicializar() {
+	public void inicializar() { // complejidad constante
 		c=null;
 	}
 
 	@Override
-	public void guardar(int dato) {
+	public void guardar(int dato) { // complejidad constante
 		Nodo n = new Nodo();
 		n.valor=dato;
 		n.sig=c;
@@ -26,7 +26,7 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 	}
 
 	@Override
-	public void sacar(int dato) {
+	public void sacar(int dato) { // complejidad lineal
 		if(c!=null) {
 			if (c.valor==dato) {
 				c=c.sig;
@@ -45,13 +45,13 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 	}
 
 	@Override
-	public int elegir() {
+	public int elegir() { // complejidad constante
 		
 		return c.valor;
 	}
 
 	@Override
-	public int perteneceCant(int dato) {
+	public int perteneceCant(int dato) { // complejidad lineal
 		Nodo aux = c;
 		int count = 0;
 		while (aux!=null) {
@@ -64,7 +64,7 @@ public class ConjuntoMamushka implements ConjuntoMamushkaTDA {
 	}
 
 	@Override
-	public boolean estaVacio() {
+	public boolean estaVacio() { // complejidad constante
 		return c==null;
 	}
 

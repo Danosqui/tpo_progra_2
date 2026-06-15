@@ -27,7 +27,7 @@ public class Uso {
 		
 	}
 
-	private static ColaTDA funcion(ColaTDA cola) {
+	private static ColaTDA funcion(ColaTDA cola) { // complejidad polinomica
 		// TODO Auto-generated method stub
 		ColaTDA aux = new Cola();
 	    aux.inicializarCola();

@@ -27,7 +27,7 @@ public class Uso {
 
 	}
 
-	private static void funcion(GrafoTDA grafo, int numero) {
+	private static void funcion(GrafoTDA grafo, int numero) { // complejidad polinomica
 		// TODO Auto-generated method stub
 	    ConjuntoTDA verticesOriginales = grafo.vertices();
 	    ConjuntoTDA vertices = new Conjunto();
