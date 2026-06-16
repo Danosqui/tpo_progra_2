@@ -24,7 +24,7 @@ public class Ejercicio7USO {
 	}
 	}
 
-	private static ConjuntoTDA funcion(PilaTDA pila) {
+	private static ConjuntoTDA funcion(PilaTDA pila) { //polinomico
 		// TODO Auto-generated method stub
 		 	ConjuntoTDA conjunto = new Conjunto();
 		    conjunto.inicializarConjunto();
