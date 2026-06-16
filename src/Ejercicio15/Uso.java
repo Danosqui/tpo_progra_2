@@ -27,37 +27,31 @@ public class Uso {
 
 	}
 
-	private static void funcion(GrafoTDA grafo, int numero) { // complejidad polinomica
+	private static int funcion(GrafoTDA grafo, int numero) { // complejidad polinomica
 		// TODO Auto-generated method stub
-	    ConjuntoTDA verticesOriginales = grafo.vertices();
-	    ConjuntoTDA vertices = new Conjunto();
-	    vertices.inicializarConjunto();
+	    ConjuntoTDA vertices = grafo.vertices();
+	   
 
-	    while (!verticesOriginales.conjuntoVacio()) {
-	        int v = verticesOriginales.elegir();
-	        verticesOriginales.sacar(v);
-	        vertices.agregar(v);
-	    }
+	    
 	    int contador = 0;
 		while(!vertices.conjuntoVacio())
 		{
 			int vertice= vertices.elegir();
 			vertices.sacar(vertice);
-			if (vertice == numero) 
+			if (vertice != numero) 
 			{
-				continue;
-			}
-			if(grafo.existeArista(vertice, numero))
-			{
-				contador++;
-			}
-			if (grafo.existeArista(numero, vertice))
-			{
+				if(grafo.existeArista(vertice, numero))
+				{
 				contador--;
+				}
+				if (grafo.existeArista(numero, vertice))
+				{
+				contador++;
+				}
 			}
-			verticesOriginales.agregar(vertice);
 		}
 		System.out.print("El vertice "+numero+" es de grado: "+ contador);
+		return contador;
 	}
 
 }

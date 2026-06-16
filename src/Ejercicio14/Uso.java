@@ -29,20 +29,12 @@ public class Uso {
 		ConjuntoTDA puentes = new Conjunto();
 	    puentes.inicializarConjunto();
 
-	    ConjuntoTDA verticesOriginales = grafo.vertices();
-	    ConjuntoTDA vertices = new Conjunto();
-	    vertices.inicializarConjunto();
+	    ConjuntoTDA vertices = grafo.vertices();
 
-	    while (!verticesOriginales.conjuntoVacio()) {
-	        int v = verticesOriginales.elegir();
-	        verticesOriginales.sacar(v);
-	        vertices.agregar(v);
-	    }
 
 	    while (!vertices.conjuntoVacio()) {
 	        int vertice = vertices.elegir();
 	        vertices.sacar(vertice);
-	        verticesOriginales.agregar(vertice);
 
 	        if (grafo.existeArista(numero1, vertice) && grafo.existeArista(vertice, numero2)) {
 	            puentes.agregar(vertice);

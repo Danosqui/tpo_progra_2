@@ -34,9 +34,10 @@ public class Uso {
 	                suma = suma + 1;
 	            }
 	        }
-
-	        suma = suma + funcion(arbol.hijoIzq());
-	        suma = suma + funcion(arbol.hijoDer());
+	        else {
+	        	suma = suma + funcion(arbol.hijoIzq());
+	        	suma = suma + funcion(arbol.hijoDer());
+	        }
 	    }
 
 	    return suma;
