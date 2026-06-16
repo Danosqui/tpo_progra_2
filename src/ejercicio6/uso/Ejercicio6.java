@@ -19,7 +19,7 @@ public class Ejercicio6 {
 	
 	}
 
-	private static float funcion(PilaTDA pila) {
+	private static float funcion(PilaTDA pila) { //lineal
 	    PilaTDA aux = new Ejercicio6Imple();
 	    aux.inicializarPila();
 
